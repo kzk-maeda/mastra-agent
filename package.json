@@ -1,0 +1,26 @@
+{
+  "name": "mastra-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_OPTIONS=\"--experimental-global-webcrypto\" mastra dev --dir src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kzk-maeda/mastra-agent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kzk-maeda/mastra-agent/issues"
+  },
+  "homepage": "https://github.com/kzk-maeda/mastra-agent#readme",
+  "dependencies": {
+    "@ai-sdk/anthropic": "^1.2.12",
+    "@mastra/core": "^0.10.8",
+    "zod": "^3.25.67"
+  }
+}
