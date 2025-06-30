@@ -1,0 +1,380 @@
+{
+  "text": "The current stock price of Apple (AAPL) is $201.08 per share. This is the last day's closing price for Apple's stock.",
+  "files": [],
+  "reasoningDetails": [],
+  "toolCalls": [],
+  "toolResults": [],
+  "finishReason": "stop",
+  "usage": {
+    "promptTokens": 1003,
+    "completionTokens": 108,
+    "totalTokens": 1111
+  },
+  "warnings": [],
+  "request": {
+    "body": "{\"model\":\"claude-3-7-sonnet-20250219\",\"max_tokens\":4096,\"temperature\":0,\"system\":[{\"type\":\"text\",\"text\":\"You are a helpful assistant that provides current stock prices. When asked about a stock, use the stock price tool to fetch the stock price.\"}],\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"What is the current stock price of Apple (AAPL)?\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"I'll fetch the current stock price of Apple for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01U8UiMiSHGF6Vhgu1EzzcJo\",\"name\":\"stockPrices\",\"input\":{\"symbol\":\"AAPL\"}}]},{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"toolu_01U8UiMiSHGF6Vhgu1EzzcJo\",\"content\":\"{\\\"symbol\\\":\\\"AAPL\\\",\\\"currentPrice\\\":\\\"201.0800\\\"}\"}]}],\"tools\":[{\"name\":\"stockPrices\",\"description\":\"Fetches the last day's closing stock price for a given symbol\",\"input_schema\":{\"type\":\"object\",\"properties\":{\"symbol\":{\"type\":\"string\"}},\"required\":[\"symbol\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}}],\"tool_choice\":{\"type\":\"auto\"}}"
+  },
+  "response": {
+    "id": "msg_016y4SU5CgvB5xqAkSS7K5S2",
+    "timestamp": "2025-06-29T23:49:26.251Z",
+    "modelId": "claude-3-7-sonnet-20250219",
+    "headers": {
+      "anthropic-organization-id": "d303f8fa-24f5-4861-b9fd-acf7b5adfe6c",
+      "anthropic-ratelimit-input-tokens-limit": "20000",
+      "anthropic-ratelimit-input-tokens-remaining": "20000",
+      "anthropic-ratelimit-input-tokens-reset": "2025-06-29T23:49:26Z",
+      "anthropic-ratelimit-output-tokens-limit": "8000",
+      "anthropic-ratelimit-output-tokens-remaining": "8000",
+      "anthropic-ratelimit-output-tokens-reset": "2025-06-29T23:49:26Z",
+      "anthropic-ratelimit-requests-limit": "50",
+      "anthropic-ratelimit-requests-remaining": "49",
+      "anthropic-ratelimit-requests-reset": "2025-06-29T23:49:26Z",
+      "anthropic-ratelimit-tokens-limit": "28000",
+      "anthropic-ratelimit-tokens-remaining": "28000",
+      "anthropic-ratelimit-tokens-reset": "2025-06-29T23:49:26Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "957951fede512647-NRT",
+      "connection": "keep-alive",
+      "content-encoding": "gzip",
+      "content-type": "application/json",
+      "date": "Sun, 29 Jun 2025 23:49:26 GMT",
+      "request-id": "req_011CQdQbwUmz8LKSzuXgjcEb",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "via": "1.1 google",
+      "x-robots-tag": "none"
+    },
+    "body": {
+      "id": "msg_016y4SU5CgvB5xqAkSS7K5S2",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "text",
+          "text": "The current stock price of Apple (AAPL) is $201.08 per share. This is the last day's closing price for Apple's stock."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 550,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 38,
+        "service_tier": "standard"
+      }
+    },
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I'll fetch the current stock price of Apple for you."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "toolu_01U8UiMiSHGF6Vhgu1EzzcJo",
+            "toolName": "stockPrices",
+            "args": { "symbol": "AAPL" }
+          }
+        ],
+        "id": "msg-6tQe0HBb7F7hBlcL79SZAxD3"
+      },
+      {
+        "role": "tool",
+        "id": "msg-GkTfg7gmkp76YCkgOm29sNaJ",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "toolu_01U8UiMiSHGF6Vhgu1EzzcJo",
+            "toolName": "stockPrices",
+            "result": { "symbol": "AAPL", "currentPrice": "201.0800" }
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "The current stock price of Apple (AAPL) is $201.08 per share. This is the last day's closing price for Apple's stock."
+          }
+        ],
+        "id": "msg-ttmHgKJYXkZrEHk0EUKlloNs"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "stepType": "initial",
+      "text": "I'll fetch the current stock price of Apple for you.",
+      "reasoningDetails": [],
+      "files": [],
+      "sources": [],
+      "toolCalls": [
+        {
+          "type": "tool-call",
+          "toolCallId": "toolu_01U8UiMiSHGF6Vhgu1EzzcJo",
+          "toolName": "stockPrices",
+          "args": { "symbol": "AAPL" }
+        }
+      ],
+      "toolResults": [
+        {
+          "type": "tool-result",
+          "toolCallId": "toolu_01U8UiMiSHGF6Vhgu1EzzcJo",
+          "toolName": "stockPrices",
+          "args": { "symbol": "AAPL" },
+          "result": { "symbol": "AAPL", "currentPrice": "201.0800" }
+        }
+      ],
+      "finishReason": "tool-calls",
+      "usage": {
+        "promptTokens": 453,
+        "completionTokens": 70,
+        "totalTokens": 523
+      },
+      "warnings": [],
+      "request": {
+        "body": "{\"model\":\"claude-3-7-sonnet-20250219\",\"max_tokens\":4096,\"temperature\":0,\"system\":[{\"type\":\"text\",\"text\":\"You are a helpful assistant that provides current stock prices. When asked about a stock, use the stock price tool to fetch the stock price.\"}],\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"What is the current stock price of Apple (AAPL)?\"}]}],\"tools\":[{\"name\":\"stockPrices\",\"description\":\"Fetches the last day's closing stock price for a given symbol\",\"input_schema\":{\"type\":\"object\",\"properties\":{\"symbol\":{\"type\":\"string\"}},\"required\":[\"symbol\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}}],\"tool_choice\":{\"type\":\"auto\"}}"
+      },
+      "response": {
+        "id": "msg_01FF2dzLX8JvKscnE1rt14tQ",
+        "timestamp": "2025-06-29T23:49:23.534Z",
+        "modelId": "claude-3-7-sonnet-20250219",
+        "headers": {
+          "anthropic-organization-id": "d303f8fa-24f5-4861-b9fd-acf7b5adfe6c",
+          "anthropic-ratelimit-input-tokens-limit": "20000",
+          "anthropic-ratelimit-input-tokens-remaining": "20000",
+          "anthropic-ratelimit-input-tokens-reset": "2025-06-29T23:49:22Z",
+          "anthropic-ratelimit-output-tokens-limit": "8000",
+          "anthropic-ratelimit-output-tokens-remaining": "8000",
+          "anthropic-ratelimit-output-tokens-reset": "2025-06-29T23:49:23Z",
+          "anthropic-ratelimit-requests-limit": "50",
+          "anthropic-ratelimit-requests-remaining": "49",
+          "anthropic-ratelimit-requests-reset": "2025-06-29T23:49:22Z",
+          "anthropic-ratelimit-tokens-limit": "28000",
+          "anthropic-ratelimit-tokens-remaining": "28000",
+          "anthropic-ratelimit-tokens-reset": "2025-06-29T23:49:22Z",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "957951e84d542647-NRT",
+          "connection": "keep-alive",
+          "content-encoding": "gzip",
+          "content-type": "application/json",
+          "date": "Sun, 29 Jun 2025 23:49:23 GMT",
+          "request-id": "req_011CQdQbg26kQiQvc3PfWwMN",
+          "server": "cloudflare",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "transfer-encoding": "chunked",
+          "via": "1.1 google",
+          "x-robots-tag": "none"
+        },
+        "body": {
+          "id": "msg_01FF2dzLX8JvKscnE1rt14tQ",
+          "type": "message",
+          "role": "assistant",
+          "model": "claude-3-7-sonnet-20250219",
+          "content": [
+            {
+              "type": "text",
+              "text": "I'll fetch the current stock price of Apple for you."
+            },
+            {
+              "type": "tool_use",
+              "id": "toolu_01U8UiMiSHGF6Vhgu1EzzcJo",
+              "name": "stockPrices",
+              "input": { "symbol": "AAPL" }
+            }
+          ],
+          "stop_reason": "tool_use",
+          "stop_sequence": null,
+          "usage": {
+            "input_tokens": 453,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 70,
+            "service_tier": "standard"
+          }
+        },
+        "messages": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "I'll fetch the current stock price of Apple for you."
+              },
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01U8UiMiSHGF6Vhgu1EzzcJo",
+                "toolName": "stockPrices",
+                "args": { "symbol": "AAPL" }
+              }
+            ],
+            "id": "msg-6tQe0HBb7F7hBlcL79SZAxD3"
+          },
+          {
+            "role": "tool",
+            "id": "msg-GkTfg7gmkp76YCkgOm29sNaJ",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01U8UiMiSHGF6Vhgu1EzzcJo",
+                "toolName": "stockPrices",
+                "result": { "symbol": "AAPL", "currentPrice": "201.0800" }
+              }
+            ]
+          }
+        ]
+      },
+      "providerMetadata": {
+        "anthropic": {
+          "cacheCreationInputTokens": 0,
+          "cacheReadInputTokens": 0
+        }
+      },
+      "experimental_providerMetadata": {
+        "anthropic": {
+          "cacheCreationInputTokens": 0,
+          "cacheReadInputTokens": 0
+        }
+      },
+      "isContinued": false
+    },
+    {
+      "stepType": "tool-result",
+      "text": "The current stock price of Apple (AAPL) is $201.08 per share. This is the last day's closing price for Apple's stock.",
+      "reasoningDetails": [],
+      "files": [],
+      "sources": [],
+      "toolCalls": [],
+      "toolResults": [],
+      "finishReason": "stop",
+      "usage": {
+        "promptTokens": 550,
+        "completionTokens": 38,
+        "totalTokens": 588
+      },
+      "warnings": [],
+      "request": {
+        "body": "{\"model\":\"claude-3-7-sonnet-20250219\",\"max_tokens\":4096,\"temperature\":0,\"system\":[{\"type\":\"text\",\"text\":\"You are a helpful assistant that provides current stock prices. When asked about a stock, use the stock price tool to fetch the stock price.\"}],\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"What is the current stock price of Apple (AAPL)?\"}]},{\"role\":\"assistant\",\"content\":[{\"type\":\"text\",\"text\":\"I'll fetch the current stock price of Apple for you.\"},{\"type\":\"tool_use\",\"id\":\"toolu_01U8UiMiSHGF6Vhgu1EzzcJo\",\"name\":\"stockPrices\",\"input\":{\"symbol\":\"AAPL\"}}]},{\"role\":\"user\",\"content\":[{\"type\":\"tool_result\",\"tool_use_id\":\"toolu_01U8UiMiSHGF6Vhgu1EzzcJo\",\"content\":\"{\\\"symbol\\\":\\\"AAPL\\\",\\\"currentPrice\\\":\\\"201.0800\\\"}\"}]}],\"tools\":[{\"name\":\"stockPrices\",\"description\":\"Fetches the last day's closing stock price for a given symbol\",\"input_schema\":{\"type\":\"object\",\"properties\":{\"symbol\":{\"type\":\"string\"}},\"required\":[\"symbol\"],\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}}],\"tool_choice\":{\"type\":\"auto\"}}"
+      },
+      "response": {
+        "id": "msg_016y4SU5CgvB5xqAkSS7K5S2",
+        "timestamp": "2025-06-29T23:49:26.251Z",
+        "modelId": "claude-3-7-sonnet-20250219",
+        "headers": {
+          "anthropic-organization-id": "d303f8fa-24f5-4861-b9fd-acf7b5adfe6c",
+          "anthropic-ratelimit-input-tokens-limit": "20000",
+          "anthropic-ratelimit-input-tokens-remaining": "20000",
+          "anthropic-ratelimit-input-tokens-reset": "2025-06-29T23:49:26Z",
+          "anthropic-ratelimit-output-tokens-limit": "8000",
+          "anthropic-ratelimit-output-tokens-remaining": "8000",
+          "anthropic-ratelimit-output-tokens-reset": "2025-06-29T23:49:26Z",
+          "anthropic-ratelimit-requests-limit": "50",
+          "anthropic-ratelimit-requests-remaining": "49",
+          "anthropic-ratelimit-requests-reset": "2025-06-29T23:49:26Z",
+          "anthropic-ratelimit-tokens-limit": "28000",
+          "anthropic-ratelimit-tokens-remaining": "28000",
+          "anthropic-ratelimit-tokens-reset": "2025-06-29T23:49:26Z",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "957951fede512647-NRT",
+          "connection": "keep-alive",
+          "content-encoding": "gzip",
+          "content-type": "application/json",
+          "date": "Sun, 29 Jun 2025 23:49:26 GMT",
+          "request-id": "req_011CQdQbwUmz8LKSzuXgjcEb",
+          "server": "cloudflare",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "transfer-encoding": "chunked",
+          "via": "1.1 google",
+          "x-robots-tag": "none"
+        },
+        "body": {
+          "id": "msg_016y4SU5CgvB5xqAkSS7K5S2",
+          "type": "message",
+          "role": "assistant",
+          "model": "claude-3-7-sonnet-20250219",
+          "content": [
+            {
+              "type": "text",
+              "text": "The current stock price of Apple (AAPL) is $201.08 per share. This is the last day's closing price for Apple's stock."
+            }
+          ],
+          "stop_reason": "end_turn",
+          "stop_sequence": null,
+          "usage": {
+            "input_tokens": 550,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 38,
+            "service_tier": "standard"
+          }
+        },
+        "messages": [
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "I'll fetch the current stock price of Apple for you."
+              },
+              {
+                "type": "tool-call",
+                "toolCallId": "toolu_01U8UiMiSHGF6Vhgu1EzzcJo",
+                "toolName": "stockPrices",
+                "args": { "symbol": "AAPL" }
+              }
+            ],
+            "id": "msg-6tQe0HBb7F7hBlcL79SZAxD3"
+          },
+          {
+            "role": "tool",
+            "id": "msg-GkTfg7gmkp76YCkgOm29sNaJ",
+            "content": [
+              {
+                "type": "tool-result",
+                "toolCallId": "toolu_01U8UiMiSHGF6Vhgu1EzzcJo",
+                "toolName": "stockPrices",
+                "result": { "symbol": "AAPL", "currentPrice": "201.0800" }
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "The current stock price of Apple (AAPL) is $201.08 per share. This is the last day's closing price for Apple's stock."
+              }
+            ],
+            "id": "msg-ttmHgKJYXkZrEHk0EUKlloNs"
+          }
+        ]
+      },
+      "providerMetadata": {
+        "anthropic": {
+          "cacheCreationInputTokens": 0,
+          "cacheReadInputTokens": 0
+        }
+      },
+      "experimental_providerMetadata": {
+        "anthropic": {
+          "cacheCreationInputTokens": 0,
+          "cacheReadInputTokens": 0
+        }
+      },
+      "isContinued": false
+    }
+  ],
+  "experimental_providerMetadata": {
+    "anthropic": { "cacheCreationInputTokens": 0, "cacheReadInputTokens": 0 }
+  },
+  "providerMetadata": {
+    "anthropic": { "cacheCreationInputTokens": 0, "cacheReadInputTokens": 0 }
+  },
+  "sources": []
+}
